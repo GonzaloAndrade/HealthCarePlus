@@ -3,6 +3,7 @@ package com.example.healthcareplus;
 import java.util.Timer;
 import java.util.TimerTask;
 
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -22,7 +23,7 @@ public class SplashActivity extends Activity {
 			@Override
 			public void run() {
 				finish();
-				Intent mainIntent = new Intent().setClass(SplashActivity.this, MainActivity.class);
+				Intent mainIntent = new Intent().setClass(SplashActivity.this, LoginActivity.class);
 				startActivity(mainIntent);
 			}
         	
