@@ -1,5 +1,7 @@
 package com.example.healthcareplus;
 
+
+import secretaria.MainActivitySecretaria;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -19,7 +21,7 @@ public class LoginActivity extends Activity {
 			
 			public void onClick(View v) {
 				// Switching to Register screen
-				Intent i = new Intent(getApplicationContext(), MainActivityDoctor.class);
+				Intent i = new Intent(getApplicationContext(), MainActivitySecretaria.class);
 				startActivity(i);
 			}
 		});
