@@ -5,7 +5,7 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="8"
+        android:minSdkVersion="11"
         android:targetSdkVersion="16" />
 
     <application
@@ -23,17 +23,27 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.healthcareplus.MainActivity"
+            android:name="com.example.healthcareplus.MainActivityDoctor"
             android:label="@string/app_name" 
             android:screenOrientation="portrait">
         </activity>
  		<activity android:name=".LoginActivity"
-                  android:label="Login to your Account">
+                  android:label="Login to your Account"
+            	  android:screenOrientation="portrait">
         </activity>
         
         <!--  Entry for RegisterActivity.class -->
         <activity android:name=".RegisterActivity"
         		  android:label="Register New Account"></activity>
+        <activity android:name=".DoctorList"
+            	  android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".DoctorSearch"
+            	  android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".DoctorCalendar"
+            	  android:screenOrientation="portrait">
+        </activity>
     </application>
 
 </manifest>

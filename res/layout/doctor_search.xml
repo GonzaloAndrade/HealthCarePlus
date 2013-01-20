@@ -1,0 +1,81 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="top" >
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="100px"
+        android:background="@layout/background"
+        android:orientation="horizontal"
+        android:padding="10dip" >
+
+        <TextView
+            android:id="@+id/textView1_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:text="Buscar"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#000" />
+
+        <EditText
+            android:id="@+id/editText1_search"
+            android:layout_width="171dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:ems="10" >
+
+            <requestFocus />
+        </EditText>
+
+    </LinearLayout>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="290dp"
+        android:background="@layout/bar_gradient"
+        android:orientation="vertical"
+        android:padding="10dip" >
+
+        <ImageView
+            android:id="@+id/icon_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:adjustViewBounds="false"
+            android:src="@drawable/list" />
+
+        <ImageView
+            android:id="@+id/calendar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/icon_calendar" />
+
+        <ImageView
+            android:id="@+id/search_selected"
+            android:layout_width="match_parent"
+            android:layout_height="59dp"
+            android:adjustViewBounds="false"
+            android:cropToPadding="false"
+            android:src="@drawable/search_selected" />
+
+        <ImageView
+            android:id="@+id/logoff_search"
+            android:layout_width="wrap_content"
+            android:layout_height="94dp"
+            android:layout_marginTop="350dp"
+            android:src="@drawable/icon_logout" />
+
+    </LinearLayout>
+
+</RelativeLayout>

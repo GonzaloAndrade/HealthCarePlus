@@ -12,14 +12,14 @@ public class LoginActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
         
-        TextView registerScreen = (TextView) findViewById(R.id.btnLogin);
+        TextView MainScreen = (TextView) findViewById(R.id.btnLogin);
         
         // Listening to register new account link
-        registerScreen.setOnClickListener(new View.OnClickListener() {
+        MainScreen.setOnClickListener(new View.OnClickListener() {
 			
 			public void onClick(View v) {
 				// Switching to Register screen
-				Intent i = new Intent(getApplicationContext(), MainActivity.class);
+				Intent i = new Intent(getApplicationContext(), MainActivityDoctor.class);
 				startActivity(i);
 			}
 		});
