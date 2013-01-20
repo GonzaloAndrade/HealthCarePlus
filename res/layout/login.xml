@@ -81,7 +81,7 @@
 		  		android:layout_height="wrap_content"
 		  		android:layout_marginTop="40dip"
 		  		android:layout_marginBottom="40dip"
-		  		android:text="Health Care Plus Copyright 2013"
+		  		android:text="Health Care Plus Copyright 2013 ESPOL"
 		  		android:gravity="center"
 		  		android:textSize="10dip"
 		  		android:textColor="#0b84aa"/>
