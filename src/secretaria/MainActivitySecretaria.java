@@ -1,6 +1,8 @@
 package secretaria;
 
+
 import com.example.healthcareplus.R;
+import com.example.healthcareplus.R.layout;
 
 import android.os.Bundle;
 import android.app.Activity;

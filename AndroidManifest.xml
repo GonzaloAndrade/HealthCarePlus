@@ -44,6 +44,9 @@
         <activity android:name=".DoctorCalendar"
             	  android:screenOrientation="portrait">
         </activity>
+        <activity android:name="secretaria.MainActivitySecretaria"
+            	  android:screenOrientation="portrait">
+        </activity>
     </application>
 
 </manifest>
