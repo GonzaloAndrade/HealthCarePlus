@@ -14,6 +14,15 @@
         android:orientation="vertical"
         android:padding="10dip" >
 
+        <ListView
+            android:id="@android:id/list"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:background="#123456" />
+        
+        
+  
     </LinearLayout>
 
     <LinearLayout

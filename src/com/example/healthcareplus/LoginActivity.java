@@ -20,7 +20,7 @@ public class LoginActivity extends Activity {
 			
 			public void onClick(View v) {
 				// Switching to Register screen
-				Intent i = new Intent(getApplicationContext(), secretaria.MainActivitySecretaria.class);
+				Intent i = new Intent(getApplicationContext(), MainActivityDoctor.class);
 				startActivity(i);
 			}
 		});

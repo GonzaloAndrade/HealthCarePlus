@@ -47,6 +47,22 @@
         <activity android:name="secretaria.MainActivitySecretaria"
             	  android:screenOrientation="portrait">
         </activity>
+        <activity android:name="EditProductActivity"
+            	  android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="NewProductActivity"
+            	  android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="JSONParser"
+            	  android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".PullToRefreshScrollViewActivity"
+            	  android:screenOrientation="portrait"
+            	  android:label="PtR ScrollView" >
+        </activity>
+        <activity android:name=".MostrarDetallesPaciente"
+            	  android:screenOrientation="portrait">
+        </activity>
     </application>
-
+<uses-permission android:name="android.permission.INTERNET" />
 </manifest>
