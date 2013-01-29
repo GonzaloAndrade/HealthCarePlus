@@ -3,27 +3,36 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:gravity="top" >
-
-    <LinearLayout
+<com.handmark.pulltorefresh.library.PullToRefreshScrollView
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/pull_refresh_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        ptr:ptrAnimationStyle="flip"
+        android:layout_marginBottom="-200px"
+        ptr:ptrMode="both" >
+    <LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="100px"
         android:background="@layout/background"
         android:orientation="vertical"
+        android:textColor="#ffff00" 
         android:padding="10dip" >
 
         <ListView
             android:id="@android:id/list"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:background="#123456" />
+            android:layout_width="match_parent"
+            android:layout_marginLeft="60dp"
+            android:layout_height="990dp" />
         
         
   
     </LinearLayout>
+</com.handmark.pulltorefresh.library.PullToRefreshScrollView>
+
+
 
     <LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"

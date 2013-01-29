@@ -18,6 +18,7 @@ import com.handmark.pulltorefresh.library.PullToRefreshBase.OnRefreshListener;
 import android.app.ListActivity;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
@@ -27,6 +28,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
+import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListAdapter;
 import android.widget.ListView;
@@ -37,8 +39,9 @@ import android.widget.Toast;
 
 public class MainActivityDoctor extends ListActivity {
 
-	
-
+	//Pull
+	PullToRefreshScrollView mPullRefreshScrollView;
+	ScrollView mScrollView;
 	
 	
 	
@@ -72,6 +75,26 @@ public class MainActivityDoctor extends ListActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.doctor_main);
 
+		
+		//Pull
+		mPullRefreshScrollView = (PullToRefreshScrollView) findViewById(R.id.pull_refresh_scrollview);
+		mPullRefreshScrollView.setOnRefreshListener(new OnRefreshListener<ScrollView>() {
+
+			@Override
+			public void onRefresh(PullToRefreshBase<ScrollView> refreshView) {
+				new GetDataTask().execute();
+			}
+		});
+
+		mScrollView = mPullRefreshScrollView.getRefreshableView();
+		//Pull
+		
+		
+		
+		
+		
+		
+		
 		
 		// Hashmap for ListView
 		citasList = new ArrayList<HashMap<String, String>>();
@@ -203,7 +226,7 @@ public class MainActivityDoctor extends ListActivity {
 			protected void onPreExecute() {
 				super.onPreExecute();
 				pDialog = new ProgressDialog(MainActivityDoctor.this);
-				pDialog.setMessage("Loading products. Please wait...");
+				pDialog.setMessage("Cargando Pacientes. Por favor espere...");
 				pDialog.setIndeterminate(false);
 				pDialog.setCancelable(false);
 				pDialog.show();
@@ -294,9 +317,36 @@ public class MainActivityDoctor extends ListActivity {
 						setListAdapter(adapter);
 					}
 				});
+				
 
 		}
 
 	}
+		
+		public class GetDataTask extends AsyncTask<Void, Void, String[]> {
 
+			@Override
+			protected String[] doInBackground(Void... params) {
+				// Simulates a background job.
+				try {
+					Thread.sleep(4000);
+				} catch (InterruptedException e) {
+				}
+				return null;
+			}
+
+			@Override
+			protected void onPostExecute(String[] result) {
+				// Do some stuff here
+				
+				// Call onRefreshComplete when the list has been refreshed.
+				mPullRefreshScrollView.onRefreshComplete();
+
+				super.onPostExecute(result);
+			}
+			
+		}
+
+		
+		
 }
