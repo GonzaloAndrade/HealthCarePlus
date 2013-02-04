@@ -19,7 +19,7 @@ import android.widget.Toast;
 public class MainActivitySecretaria extends Activity {
 	public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.secretaria_date);
+        setContentView(R.layout.secretaria_add);
         
         
     }

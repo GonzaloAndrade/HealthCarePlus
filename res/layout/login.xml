@@ -54,27 +54,43 @@
 		  		android:layout_height="wrap_content"
 		  		android:textColor="#372c24"
 		  		android:text="Usuario"/>
-		  <EditText android:layout_width="fill_parent"
-		  		android:layout_height="wrap_content"
-		  		android:layout_marginTop="5dip"
-		  		android:layout_marginBottom="20dip"
-		  		android:singleLine="true"/>
+
+		  <EditText
+		      android:id="@+id/usu_usuario"
+		      android:layout_width="fill_parent"
+		      android:layout_height="wrap_content"
+		      android:layout_marginBottom="20dip"
+		      android:layout_marginTop="5dip"
+		      android:singleLine="true" />
+
 		  <!--  Password Label -->
 		  <TextView android:layout_width="fill_parent"
 		  		android:layout_height="wrap_content"
 		  		android:textColor="#372c24"
 		  		android:text="Contraseña"/>
-		  <EditText android:layout_width="fill_parent"
-		  		android:layout_height="wrap_content"
-		  		android:layout_marginTop="5dip"
-		  		android:singleLine="true"
-		  		android:password="true"/>
-		  <!-- Login button -->	
-		  <Button android:id="@+id/btnLogin" 
-		  		android:layout_width="fill_parent"
-		  		android:layout_height="wrap_content"
-		  		android:layout_marginTop="10dip"
-		  		android:text="Login"/>
+
+		  <EditText
+		      android:id="@+id/usu_contrasena"
+		      android:layout_width="fill_parent"
+		      android:layout_height="wrap_content"
+		      android:layout_marginTop="5dip"
+		      android:password="true"
+		      android:singleLine="true" />
+
+		  <!-- Login button -->
+
+		  <TextView
+		      android:id="@+id/respuesta"
+		      android:layout_width="fill_parent"
+		      android:layout_height="wrap_content" />
+
+		  <Button
+		      android:id="@+id/btnIniciarSesion"
+		      android:layout_width="fill_parent"
+		      android:layout_height="wrap_content"
+		      android:layout_marginTop="10dip"
+		      android:text="Login" />
+
 		  <!-- Link to Registration Screen -->		
 		  <TextView android:id="@+id/link_to_register" 
 		  		android:layout_width="fill_parent"

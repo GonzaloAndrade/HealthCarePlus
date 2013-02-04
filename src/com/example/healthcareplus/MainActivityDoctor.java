@@ -10,7 +10,6 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 
-import com.example.healthcareplus.PullToRefreshScrollViewActivity.GetDataTask;
 import com.handmark.pulltorefresh.library.PullToRefreshBase;
 import com.handmark.pulltorefresh.library.PullToRefreshScrollView;
 import com.handmark.pulltorefresh.library.PullToRefreshBase.OnRefreshListener;
@@ -82,7 +81,9 @@ public class MainActivityDoctor extends ListActivity {
 
 			@Override
 			public void onRefresh(PullToRefreshBase<ScrollView> refreshView) {
-				new GetDataTask().execute();
+				
+				new CagarCitas().execute();
+				
 			}
 		});
 
@@ -284,7 +285,7 @@ public class MainActivityDoctor extends ListActivity {
 						// no products found
 						// Launch Add New product Activity
 						Intent i = new Intent(getApplicationContext(),
-								NewProductActivity.class);
+								AddPatient.class);
 						// Closing all previous activities
 						i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 						startActivity(i);
@@ -308,16 +309,24 @@ public class MainActivityDoctor extends ListActivity {
 						/**
 						 * Updating parsed JSON data into ListView
 						 * */
+						
+						
 						ListAdapter adapter = new SimpleAdapter(
 								MainActivityDoctor.this, citasList,
+								
+								
+								
 								R.layout.list_item, new String[] { TAG_CODIGO, TAG_CEDULA,
 										TAG_PACIENTE, TAG_USUARIO, TAG_HORA, TAG_FECHA},
-								new int[] { R.id.cit_codigo, R.id.pac_cedula, R.id.paciente, R.id.usuario, R.id.hora, R.id.fecha });
+								new int[] { R.id.cit_codigo, R.id.pac_cedula, R.id.paciente, R.id.usuario, R.id.hora, R.id.fecha }
+								
+								
+								);
 						// updating listview
 						setListAdapter(adapter);
+						
 					}
 				});
-				
 
 		}
 
@@ -335,15 +344,7 @@ public class MainActivityDoctor extends ListActivity {
 				return null;
 			}
 
-			@Override
-			protected void onPostExecute(String[] result) {
-				// Do some stuff here
-				
-				// Call onRefreshComplete when the list has been refreshed.
-				mPullRefreshScrollView.onRefreshComplete();
 
-				super.onPostExecute(result);
-			}
 			
 		}
 

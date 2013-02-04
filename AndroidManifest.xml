@@ -50,7 +50,7 @@
         <activity android:name="EditProductActivity"
             	  android:screenOrientation="portrait">
         </activity>
-        <activity android:name="NewProductActivity"
+        <activity android:name="secretaria.AddPatient"
             	  android:screenOrientation="portrait">
         </activity>
         <activity android:name="JSONParser"

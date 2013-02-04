@@ -10,11 +10,6 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 
-import com.example.healthcareplus.PullToRefreshScrollViewActivity.GetDataTask;
-import com.handmark.pulltorefresh.library.PullToRefreshBase;
-import com.handmark.pulltorefresh.library.PullToRefreshScrollView;
-import com.handmark.pulltorefresh.library.PullToRefreshBase.OnRefreshListener;
-
 import android.app.ListActivity;
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -254,7 +249,7 @@ public class DoctorList extends ListActivity {
 						// no products found
 						// Launch Add New product Activity
 						Intent i = new Intent(getApplicationContext(),
-								NewProductActivity.class);
+								AddPatient.class);
 						// Closing all previous activities
 						i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 						startActivity(i);
