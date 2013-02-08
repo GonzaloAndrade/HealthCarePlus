@@ -89,9 +89,16 @@
 		      android:layout_width="fill_parent"
 		      android:layout_height="wrap_content"
 		      android:layout_marginTop="10dip"
-		      android:text="Login" />
+		      android:text="Login Doctor" />
 
-		  <!-- Link to Registration Screen -->		
+		  <!-- Link to Registration Screen -->
+
+		  <Button
+		      android:id="@+id/AgregarUsuario"
+		      android:layout_width="match_parent"
+		      android:layout_height="wrap_content"
+		      android:text="Agregar Usuario" />
+		
 		  <TextView android:id="@+id/link_to_register" 
 		  		android:layout_width="fill_parent"
 		  		android:layout_height="wrap_content"

@@ -25,13 +25,32 @@
             android:id="@android:id/list"
             android:layout_width="match_parent"
             android:layout_marginLeft="60dp"
+            android:layout_marginTop="30dip"
             android:layout_height="990dp" />
         
         
   
     </LinearLayout>
 </com.handmark.pulltorefresh.library.PullToRefreshScrollView>
+<LinearLayout android:id="@+id/header"
+  		    android:orientation="vertical"
+  				android:layout_width="fill_parent"
+  				android:layout_height="wrap_content"
+  				android:background="@layout/header_gradient" 
+  				android:paddingTop="5dip"
+  				android:paddingBottom="5dip">
+  				<!-- Logo Start-->
 
+  			<TextView
+  			    android:layout_width="wrap_content"
+  			    android:layout_height="wrap_content"
+  			    android:layout_marginLeft="80dip"
+  			    android:layout_marginBottom="10dip"
+  			    android:textColor="#FFFFFF"
+  			    android:text="Citas de hoy"/>
+
+  				<!-- Logo Ends -->
+  		</LinearLayout>
 
 
     <LinearLayout

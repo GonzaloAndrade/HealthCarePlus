@@ -24,6 +24,7 @@ import android.widget.TextView;
 public class LoginActivity extends Activity{
 	
 	Button btnIniciarSesion;
+	Button AgregarUsuario;
 	
 	TextView txtUsuario;
 	TextView txtContrasena;
@@ -56,9 +57,22 @@ public class LoginActivity extends Activity{
 		
 		// Buttons
 		btnIniciarSesion = (Button) findViewById(R.id.btnIniciarSesion);
-		
+		AgregarUsuario = (Button) findViewById(R.id.AgregarUsuario);
 		// view products click event
 		btnIniciarSesion.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View view) {
+				// Launching All products Activity
+				Intent i = new Intent(getApplicationContext(), MainActivityDoctor.class);
+				startActivity(i);
+			//new verificarUsuario().execute();
+			}
+			
+		});
+		
+		
+		AgregarUsuario.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
 			public void onClick(View view) {

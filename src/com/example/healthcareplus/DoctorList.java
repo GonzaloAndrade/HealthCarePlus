@@ -276,8 +276,8 @@ public class DoctorList extends ListActivity {
 						ListAdapter adapter = new SimpleAdapter(
 								DoctorList.this, citasList,
 								R.layout.list_item, new String[] { TAG_CODIGO, TAG_CEDULA,
-										TAG_PACIENTE, TAG_USUARIO, TAG_HORA, TAG_FECHA},
-								new int[] { R.id.cit_codigo, R.id.pac_cedula, R.id.paciente, R.id.usuario, R.id.hora, R.id.fecha });
+										TAG_PACIENTE, TAG_HORA, TAG_FECHA},
+								new int[] { R.id.cit_codigo, R.id.pac_cedula, R.id.paciente, R.id.hora, R.id.fecha });
 						// updating listview
 						setListAdapter(adapter);
 					}
